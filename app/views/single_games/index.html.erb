@@ -1,0 +1,25 @@
+<h1>Listing single_games</h1>
+
+<table>
+  <tr>
+    <th>Player</th>
+    <th>Location</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @single_games.each do |single_game| %>
+  <tr>
+    <td><%= single_game.player %></td>
+    <td><%= single_game.location %></td>
+    <td><%= link_to 'Show', single_game %></td>
+    <td><%= link_to 'Edit', edit_single_game_path(single_game) %></td>
+    <td><%= link_to 'Destroy', single_game, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Single game', new_single_game_path %>

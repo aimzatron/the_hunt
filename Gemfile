@@ -3,12 +3,13 @@ source 'https://rubygems.org'
 gem 'rails', '3.2.13'
 gem 'sqlite3'
 
+gem 'foursquare2'
+gem 'omniauth-foursquare'
+
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
   gem 'uglifier', '>= 1.0.3'
-  gem 'omniauth-foursquare'
-  gem 'foursquare2'
 end
 
 gem 'jquery-rails'
