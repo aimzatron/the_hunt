@@ -11,6 +11,6 @@ TheHunt::Application.routes.draw do
   match '/auth/failure', to: redirect('/')
   match 'signout', to: 'sessions#destroy', as: 'signout'
   match 'players', to: 'games#_players', as: 'players'
-  match '/games_controller/new', to: 'games#new'
+  match '/games/new', to: 'games#new'
   match 'single_game', to: 'single_games#new', as: 'single_game'
 end

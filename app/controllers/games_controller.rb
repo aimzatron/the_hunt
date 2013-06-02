@@ -25,10 +25,10 @@ class GamesController < ApplicationController
   # GET /games/new.json
   def new
     @game = Game.new
-
-    respond_to do |format|
-      format.html # new.html.erb
-      format.json { render json: @game }
+    if 'Just Me'
+      redirect_to :controller => :single_games, :action => :new
+    else
+      render 'show'
     end
   end
 
