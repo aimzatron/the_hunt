@@ -11,3 +11,10 @@
  *= require_self
  *= require_tree .
  */
+
+/*********** BACKGROUND ************/
+
+.main-container {
+  background-image: url('grey_bg.png');
+  background-repeat: repeat;
+}

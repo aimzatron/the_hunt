@@ -1,0 +1,21 @@
+
+<center>
+  <% if current_user %>
+    <h1>Who will be on this hunt?</h1>
+    <br>
+      <form method="post" action="/games/new" class="button_to">
+        <div>
+          <input value="Just Me" type="submit" />
+        </div>
+      </form>
+  <% else %> 
+    <h1> You must be signed in via Foursquare to start hunting.</h1>
+    <%= link_to "Sign in with Foursquare", "/auth/foursquare" %>
+  <% end %>
+</center>
+
+
+
+
+
+  
