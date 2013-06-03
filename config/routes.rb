@@ -13,6 +13,4 @@ TheHunt::Application.routes.draw do
   get '/auth/foursquare/callback', to: 'sessions#create'
   match '/auth/failure', to: redirect('/')
   match 'signout', to: 'sessions#destroy', as: 'signout'
-  match 'show_map', to: 'places#show'
-
 end
