@@ -1,5 +1,8 @@
 TheHunt::Application.routes.draw do
 
+  resources :places
+
+
   resources :games
 
 
@@ -10,7 +13,6 @@ TheHunt::Application.routes.draw do
   get '/auth/foursquare/callback', to: 'sessions#create'
   match '/auth/failure', to: redirect('/')
   match 'signout', to: 'sessions#destroy', as: 'signout'
-  match 'players', to: 'games#_players', as: 'players'
-  match '/games/new', to: 'games#new'
-  match 'single_game', to: 'single_games#new', as: 'single_game'
+  match 'show_map', to: 'places#show'
+
 end

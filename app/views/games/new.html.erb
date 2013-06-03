@@ -1,5 +1,12 @@
-<h1>New Hunt</h1>
 
-WTF BRO?
+<center>
+  <% if current_user %>
+    <h1>Who will be on this hunt?</h1>
+    <br>
+    <%= button_to "Just Me", new_single_game_path, method: :get %>
+  <% else %> 
+    <h1> You must be signed in via Foursquare to start hunting.</h1>
+    <%= link_to "Sign in with Foursquare", "/auth/foursquare" %>
+  <% end %>
+</center>
 
-<%= link_to 'Back', games_path %>
