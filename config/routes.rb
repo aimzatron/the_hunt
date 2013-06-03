@@ -1,5 +1,8 @@
 TheHunt::Application.routes.draw do
 
+  resources :locations
+
+
   resources :places
 
 

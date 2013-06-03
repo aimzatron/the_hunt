@@ -5,8 +5,8 @@ gem 'sqlite3'
 
 gem 'foursquare2'
 gem 'omniauth-foursquare'
-gem 'gmaps4rails'
 gem 'pry'
+gem "nifty-generators", :group => :development
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
