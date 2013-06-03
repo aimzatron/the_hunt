@@ -42,10 +42,8 @@ class SingleGamesController < ApplicationController
     respond_to do |format|
       if @single_game.update_attributes(params[:single_game])
         format.html { redirect_to @single_game, notice: 'Single game was successfully updated.' }
-        format.json { head :no_content }
       else
         format.html { render action: "edit" }
-        format.json { render json: @single_game.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -56,7 +54,6 @@ class SingleGamesController < ApplicationController
 
     respond_to do |format|
       format.html { redirect_to single_games_url }
-      format.json { head :no_content }
     end
   end
 end
