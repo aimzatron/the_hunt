@@ -8,39 +8,7 @@
             $(document).ready(function() {
                 $('#far-clouds').pan({fps: 30, speed: 0.7, dir: 'left', depth: 30});
                 $('#near-clouds').pan({fps: 30, speed: 1, dir: 'left', depth: 70});
-            window.actions = {
-                    speedyClouds: function(){
-                        $('#far-clouds').spSpeed(12);
-                        $('#near-clouds').spSpeed(20);
-                    },
-                    runningClouds: function(){
-                        $('#far-clouds').spSpeed(8);
-                        $('#near-clouds').spSpeed(12);
-                    },
-                    walkingClouds: function(){
-                        $('#far-clouds').spSpeed(3);
-                        $('#near-clouds').spSpeed(5);
-                    },
-                    lazyClouds: function(){
-                        $('#far-clouds').spSpeed(0.7);
-                        $('#near-clouds').spSpeed(1);
-                    },
-                    stop: function(){
-                        $('#far-clouds, #near-clouds').spStop();
-                    },
-                    start: function(){
-                        $('#far-clouds, #near-clouds').spStart();
-                    },
-                    toggle: function(){
-                        $('#far-clouds, #near-clouds').spToggle();
-                    },
-                    left: function(){
-                        $('#far-clouds, #near-clouds').spChangeDir('left');                    
-                    },
-                    right: function(){
-                        $('#far-clouds, #near-clouds').spChangeDir('right');                    
-                    }
-                };
+                $('#birds').pan({fps: 100, no_of_frames:2, speed: 2, dir: 'left', depth:100})
             });  
     </script>
   </head>
@@ -48,13 +16,14 @@
   <div class="container">
     <div id="far-clouds" class="far-clouds stage"></div>
     <div id="near-clouds" class="near-clouds stage"></div>
+    <div id="birds" class="birds stage"></div>
     <div class="mainContent">
       <div>
         <center>
           <%= image_tag "hunt_logo.png" %>
           <br>
-          <br>
-          <div class="myButton"
+          <p></p>
+          <div class="myButton">
             <%= link_to('Get Started!', new_game_path) %>
           </div>
         </center>

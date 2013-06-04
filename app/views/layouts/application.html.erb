@@ -10,8 +10,11 @@
   <div class="main_container">
     <div id="user_nav">
       <% if current_user %>
-        Signed in as <%= find_user_name %>!
-        <%= link_to "Sign out", signout_path %>
+      <div class="pic">
+       <%= image_tag find_user_photo %>
+      </div>
+        <p>Hi, <%= find_user_name %>!
+        <%= link_to "Sign out", signout_path %></p>
       <% else %>
         <%= link_to "Sign in with Foursquare", "/auth/foursquare" %>
       <% end %>
