@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <%= stylesheet_link_tag    "application", :media => "all" %>
+    <%= javascript_include_tag "application" %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+    <div class="main_container">
+    <div id="user_nav">
+      <% if current_user %>
+      <div class="pic">
+       <%= image_tag find_user_photo %>
+      </div>
+        <p>Hi, <%= find_user_name %>!
+        <%= link_to "Sign out", signout_path %></p>
+      <% else %>
+        <%= link_to "Sign in with Foursquare", "/auth/foursquare" %>
+      <% end %>
+    </div>
+    <%= user_info %>
+  </div>
+  </body>
+</html>
+
