@@ -1,11 +1,65 @@
 <!DOCTYPE html>
 <html>
-  <head></head>
+  <head>
+  <link rel="stylesheet" type="text/css" href="stylesheets/application.css" />
+  <script src="js/jquery-1.6.3.min.js" type="text/javascript"></script>
+  <script src="js/jquery.spritely-0.6.js" type="text/javascript"></script>
+  <script type="text/javascript">
+            $(document).ready(function() {
+                $('#far-clouds').pan({fps: 30, speed: 0.7, dir: 'left', depth: 30});
+                $('#near-clouds').pan({fps: 30, speed: 1, dir: 'left', depth: 70});
+            window.actions = {
+                    speedyClouds: function(){
+                        $('#far-clouds').spSpeed(12);
+                        $('#near-clouds').spSpeed(20);
+                    },
+                    runningClouds: function(){
+                        $('#far-clouds').spSpeed(8);
+                        $('#near-clouds').spSpeed(12);
+                    },
+                    walkingClouds: function(){
+                        $('#far-clouds').spSpeed(3);
+                        $('#near-clouds').spSpeed(5);
+                    },
+                    lazyClouds: function(){
+                        $('#far-clouds').spSpeed(0.7);
+                        $('#near-clouds').spSpeed(1);
+                    },
+                    stop: function(){
+                        $('#far-clouds, #near-clouds').spStop();
+                    },
+                    start: function(){
+                        $('#far-clouds, #near-clouds').spStart();
+                    },
+                    toggle: function(){
+                        $('#far-clouds, #near-clouds').spToggle();
+                    },
+                    left: function(){
+                        $('#far-clouds, #near-clouds').spChangeDir('left');                    
+                    },
+                    right: function(){
+                        $('#far-clouds, #near-clouds').spChangeDir('right');                    
+                    }
+                };
+            });  
+    </script>
+  </head>
   <body>
-  <center>
-    <%= image_tag "hunt_logo.png" %>
-    <br>
-    <h1><%= link_to('Get Started!', new_game_path) %></h1>
-  </center>
+  <div class="container">
+    <div id="far-clouds" class="far-clouds stage"></div>
+    <div id="near-clouds" class="near-clouds stage"></div>
+    <div class="mainContent">
+      <div>
+        <center>
+          <%= image_tag "hunt_logo.png" %>
+          <br>
+          <br>
+          <div class="myButton"
+            <%= link_to('Get Started!', new_game_path) %>
+          </div>
+        </center>
+      </div>
+    </div>
+  </div>
   </body>
 </html>
