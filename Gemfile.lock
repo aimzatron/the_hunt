@@ -49,6 +49,7 @@ GEM
       faraday (~> 0.8)
       faraday_middleware (>= 0.8)
       hashie (>= 1.0, < 3.0.0)
+    geocoder (1.1.8)
     hashie (2.0.5)
     hike (1.2.2)
     httpauth (0.2.0)
@@ -63,8 +64,11 @@ GEM
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
+    metaclass (0.0.1)
     method_source (0.8.1)
     mime-types (1.23)
+    mocha (0.14.0)
+      metaclass (~> 0.0.1)
     multi_json (1.7.4)
     multipart-post (1.2.0)
     nifty-generators (0.4.6)
@@ -141,7 +145,9 @@ PLATFORMS
 DEPENDENCIES
   coffee-rails (~> 3.2.1)
   foursquare2
+  geocoder
   jquery-rails
+  mocha
   nifty-generators
   omniauth-foursquare
   pry
