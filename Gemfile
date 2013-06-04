@@ -7,6 +7,7 @@ gem 'foursquare2'
 gem 'omniauth-foursquare'
 gem 'pry'
 gem "nifty-generators", :group => :development
+gem 'geocoder'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
@@ -15,3 +16,5 @@ group :assets do
 end
 
 gem 'jquery-rails'
+
+gem "mocha", :group => :test
