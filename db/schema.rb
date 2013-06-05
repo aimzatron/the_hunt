@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130604201647) do
+ActiveRecord::Schema.define(:version => 20130605030125) do
 
   create_table "games", :force => true do |t|
     t.boolean  "status"
@@ -25,8 +25,9 @@ ActiveRecord::Schema.define(:version => 20130604201647) do
     t.string   "name"
     t.string   "uid"
     t.string   "provider"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+    t.string   "oauth_token"
   end
 
 end

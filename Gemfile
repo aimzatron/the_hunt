@@ -2,12 +2,14 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.13'
 gem 'sqlite3'
+gem 'pg'
 
 gem 'foursquare2'
 gem 'omniauth-foursquare'
 gem 'pry'
 gem "nifty-generators", :group => :development
 gem 'geocoder'
+gem 'oauth2'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
