@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
   <head>
-  <link rel="stylesheet" type="text/css" href="stylesheets/application.css" />
   <script type="text/javascript">
             $(document).ready(function() {
                 $('#far-clouds').pan({fps: 30, speed: 0.7, dir: 'left', depth: 30});
@@ -22,7 +21,7 @@
           <br>
           <p></p>
           <div class="myButton">
-            <%= link_to('Go Solo', 'solo_games#index') %>
+            <%= link_to('Go Solo', 'locations#show') %>
           </div>
           <div class="myButton">
             <%= link_to('Teams')%>
