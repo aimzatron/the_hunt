@@ -9,7 +9,6 @@ gem 'omniauth-foursquare'
 gem 'pry'
 gem "nifty-generators", :group => :development
 gem 'geocoder'
-gem 'oauth2'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'

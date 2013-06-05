@@ -150,7 +150,6 @@ DEPENDENCIES
   jquery-rails
   mocha
   nifty-generators
-  oauth2
   omniauth-foursquare
   pg
   pry
