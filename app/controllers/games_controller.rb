@@ -2,7 +2,7 @@ class GamesController < ActionController::Base
   include ApplicationHelper
 
   def index
-    
+
   end 
 
   def new
@@ -23,4 +23,5 @@ class GamesController < ActionController::Base
   def show
     
   end
+
 end

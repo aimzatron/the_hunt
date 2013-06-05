@@ -1,4 +1,6 @@
 TheHunt::Application.routes.draw do
+  resources :locations
+
   root :to => "home#index"
   get '/auth/foursquare/callback', to: 'sessions#create'
   match '/auth/failure', to: redirect('/')
