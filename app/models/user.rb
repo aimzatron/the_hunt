@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-  attr_accessible :uid, :firstName
+  attr_accessible :uid, :firstName, :oauth_token
   belongs_to :game, polymorphic: true
 
   def self.from_omniauth(auth)
@@ -11,6 +11,7 @@ class User < ActiveRecord::Base
       user.provider = auth["provider"]
       user.uid = auth["uid"]  
       user.name = auth["firstName"]
+      user.oauth_token = auth["ACCESS_TOKEN"]
     end
   end
 end
