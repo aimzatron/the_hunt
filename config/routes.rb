@@ -9,5 +9,6 @@ TheHunt::Application.routes.draw do
   resources :games
   resources :solo_games, controller: :games
   resources :multi_games, controller: :games
+  resources :check_ins
 
 end

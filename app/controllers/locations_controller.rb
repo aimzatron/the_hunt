@@ -1,4 +1,5 @@
 class LocationsController < ApplicationController
+  include CheckInsHelper
   def index
     if params[:search].present?
       @locations = Location.near(params[:search], 50, :order => :distance)
