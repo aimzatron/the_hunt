@@ -24,7 +24,7 @@ module CheckInsHelper
     venue_info["name"]
   end
 
-  def address
+  def physical_address
     street= last_checkin_venue["address"] 
     city = last_checkin_venue["city"]
     state= last_checkin_venue["state"]
@@ -32,11 +32,11 @@ module CheckInsHelper
     "#{street}, #{city}, #{state}, #{zip}"
   end
 
-  def latitude
+  def lat
     last_checkin_venue['lat']
   end
 
-  def longitude
+  def lng
     last_checkin_venue['lng']
   end
 end
