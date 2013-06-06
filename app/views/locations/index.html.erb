@@ -21,6 +21,12 @@
           <td><%= link_to "Show", location %></td>
           <td><%= link_to "Edit", edit_location_path(location) %></td>
           <td><%= link_to "Destroy", location, :confirm => 'Are you sure?', :method => :delete %></td>
+          <td><%# if location.address == @address || location.address == @venue|| location.latitude % @latitude < 1 && location.longitude % @longitude < 1 %>
+                        <%#Complete%>
+              <%# else %>
+                        Incomplete
+              <%# end %>
+          </td>
         </tr>
       <% end %>
       <br>
