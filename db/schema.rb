@@ -11,7 +11,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130605222137) do
+ActiveRecord::Schema.define(:version => 20130616044623) do
+
+  create_table "blogs", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+    t.text     "description"
+  end
 
   create_table "check_ins", :force => true do |t|
     t.text    "text"
@@ -22,6 +29,16 @@ ActiveRecord::Schema.define(:version => 20130605222137) do
     t.float   "latitude"
     t.float   "longitude"
   end
+
+  create_table "comments", :force => true do |t|
+    t.string   "name"
+    t.text     "body"
+    t.integer  "post_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "comments", ["post_id"], :name => "index_comments_on_post_id"
 
   create_table "games", :force => true do |t|
     t.boolean  "status"
@@ -40,6 +57,20 @@ ActiveRecord::Schema.define(:version => 20130605222137) do
     t.boolean  "gmaps"
   end
 
+  create_table "movies", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "posts", :force => true do |t|
+    t.string   "title"
+    t.text     "body"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+    t.integer  "blog_id"
+  end
+
   create_table "users", :force => true do |t|
     t.string   "name"
     t.string   "uid"
@@ -47,6 +78,7 @@ ActiveRecord::Schema.define(:version => 20130605222137) do
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
     t.string   "token"
+    t.string   "photo_url"
   end
 
 end
