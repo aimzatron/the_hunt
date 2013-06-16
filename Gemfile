@@ -1,7 +1,6 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.13'
-#gem 'sqlite3'
 gem 'pg'
 
 gem 'foursquare2'
@@ -10,6 +9,9 @@ gem 'pry'
 gem "nifty-generators", :group => :development
 gem 'geocoder'
 gem 'gmaps4rails'
+gem 'sidekiq'
+gem 'sinatra', require: false
+gem 'slim'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'

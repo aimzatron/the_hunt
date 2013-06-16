@@ -1,6 +1,5 @@
 class User < ActiveRecord::Base
-  attr_accessible :uid, :name, :token
-  belongs_to :game, polymorphic: true
+  attr_accessible :uid, :name, :token, :photo_url
 
   def self.from_omniauth(auth)
     where(auth.slice("provider", "uid")).first || create_from_omniauth(auth)
@@ -9,8 +8,7 @@ class User < ActiveRecord::Base
   def self.create_from_omniauth(auth)
     create! do |user|
       user.provider = auth["provider"]
-      user.uid = auth["uid"]  
-      user.name = auth["firstName"]
+      user.uid = auth["uid"]
       user.token= auth['credentials']['token']
     end
   end
