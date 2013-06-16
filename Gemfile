@@ -12,6 +12,7 @@ gem 'gmaps4rails'
 gem 'sidekiq'
 gem 'sinatra', require: false
 gem 'slim'
+gem 'rspec-rails'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'

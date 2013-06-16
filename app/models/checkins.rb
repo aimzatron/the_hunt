@@ -4,6 +4,14 @@ class Checkins < ActiveRecord::Base
   attr_accessible :venue, :text, :check_in_id, :checkin_time, 
                   :address, :latitude, :longitude
 
+  def store_check_in(check_in)
+    CheckIn.create(:event_created_at => Time.at(check_in.createdAt),
+                   :check_in_id => check_in.id,
+                   :text => check_in.shout,
+                   :venue => check_in.venue,
+                   :user_id => user.id)
+  end
+
   def last_checkin
     info_hash = client.user_checkins.to_hash
     items_array = info_hash['items']
