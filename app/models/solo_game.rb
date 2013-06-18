@@ -1,4 +1,0 @@
-class SoloGame < Game
-
-
-end
