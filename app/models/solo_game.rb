@@ -1,0 +1,4 @@
+class SoloGame < Game
+
+
+end

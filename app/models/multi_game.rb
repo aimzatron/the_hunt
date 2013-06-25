@@ -1,0 +1,2 @@
+class MultiGame < Game
+end
