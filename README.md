@@ -6,11 +6,11 @@ At this moment in time, you can only do a solo hunt.
 
 Steps to use The Hunt:
 
-1.$ git clone git@github.com:aimzatron/the_hunt.git
+1. $git clone git@github.com:aimzatron/the_hunt.git
 
-2.$ cd the_hunt
+2. $cd the_hunt
 
-3.$ rails s
+3. $rails s
 
 4. Go to http://localhost:3000!
 
