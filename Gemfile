@@ -13,6 +13,7 @@ gem 'sidekiq'
 gem 'sinatra', require: false
 gem 'slim'
 gem 'rspec-rails'
+gem 'capybara'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
